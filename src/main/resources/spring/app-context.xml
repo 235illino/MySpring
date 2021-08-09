@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans  xmlns="http://www.springframework.org/schema/beans"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:p="http://www.springframework.org/schema/p"
+        xsi:schemaLocation=
+                "http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans.xsd">
+<!--    <bean  id="provider"-->
+<!--           class="book.hello_world.Provider.HelloWorldMessageProvider"/>-->
+<!--    <bean  id="renderer"-->
+<!--           class="book.hello_world.Renderer.StandardOutMessageRenderer"-->
+<!--           p:messageProvider-ref="provider"/>-->
+
+    <bean id="personDao" class="video.spring_01.dao.PersonDaoSimple">
+
+    </bean>
+    <bean id="service"  class="video.spring_01.service.PersonSimpleService">
+<!--            <constructor-arg name="dao" ref="personDao"/>-->
+        <property name="dao" ref="personDao"/>
+
+
+
+    </bean>
+
+</beans>
