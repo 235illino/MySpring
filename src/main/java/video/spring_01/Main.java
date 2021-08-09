@@ -3,10 +3,12 @@ package video.spring_01;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
+import video.spring_01.dao.PersonDaoSimple;
 import video.spring_01.domain.Person;
 import video.spring_01.service.PersonService;
+import video.spring_01.service.PersonSimpleService;
 
-@ComponentScan
+@ComponentScan(basePackageClasses = {PersonDaoSimple.class, PersonSimpleService.class})
 @Configuration
 public class Main {
 
