@@ -7,9 +7,9 @@ public class PersonSimpleService implements PersonService{
 
     private PersonDao dao;
 
-//    public PersonSimpleService(PersonDao dao) {
-//        this.dao = dao;
-//    }
+    public PersonSimpleService(PersonDao dao) {
+        this.dao = dao;
+    }
 
 
     public void setDao(PersonDao dao) {
